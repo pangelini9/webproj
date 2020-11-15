@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Teams in the app</title>
+</head>
+<body>
+	<h1>Teams</h1>
+	<p>These are the teams in our database:</p>
+
+	<ul>
+		{% for team in teams %}
+
+		<li><a href = "{% url 'football:teamplayers' team.id %}">{{team}}</a></li>
+
+		{% endfor %}
+
+	<p>To go back to the homepage, click <a href="..">here</a>.</p>
+
+</body>
+</html>
